@@ -10,16 +10,14 @@ services:
       POSTGRES_DB: nodejs_course_database
     ports:
       - "5432:5432"
-
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:8.5
     container_name: node_course_pgadmin_container
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin_password
     ports:
-      - "8080:8080"
+      - "8888:80"
     depends_on:
       - postgres
-
 
